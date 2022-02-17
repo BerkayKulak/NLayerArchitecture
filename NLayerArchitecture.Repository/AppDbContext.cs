@@ -4,12 +4,12 @@ using NLayerArchitecture.Core;
 
 namespace NLayerArchitecture.Repository
 {
-    public class AppDbContext:DbContext
+    public class AppDbContext : DbContext
     {
         // DbContextOptions dememizin sebebi yolu startup tarafında vereceğim
-        public AppDbContext(DbContextOptions<AppDbContext> options):base(options)
+        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
         {
-            
+
         }
 
         public DbSet<Category> Categories { get; set; }
@@ -19,6 +19,25 @@ namespace NLayerArchitecture.Repository
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             modelBuilder.ApplyConfigurationsFromAssembly(Assembly.GetExecutingAssembly());
+
+            modelBuilder.Entity<ProductFeature>().HasData(new ProductFeature()
+            {
+                Id = 1,
+                Color = "Kırmızı",
+                Height = 100,
+                Width = 200,
+                ProductId = 1
+            },
+                new ProductFeature()
+                {
+                    Id = 2,
+                    Color = "Mavi",
+                    Height = 300,
+                    Width = 200,
+                    ProductId = 2
+                }
+
+            );
 
             base.OnModelCreating(modelBuilder);
         }
