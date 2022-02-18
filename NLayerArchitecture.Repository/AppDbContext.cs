@@ -1,6 +1,7 @@
 ﻿using System.Reflection;
 using Microsoft.EntityFrameworkCore;
 using NLayerArchitecture.Core;
+using NLayerArchitecture.Core.Model;
 
 namespace NLayerArchitecture.Repository
 {
