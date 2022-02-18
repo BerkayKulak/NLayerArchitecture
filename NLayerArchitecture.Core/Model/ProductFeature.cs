@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace NLayerArchitecture.Core
+namespace NLayerArchitecture.Core.Model
 {
     public class ProductFeature
     {
