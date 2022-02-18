@@ -12,13 +12,25 @@ namespace NLayerArchitecture.API.Controllers
     {
         private readonly IMapper _mapper;
         private readonly IService<Product> _service;
+        private readonly IProductService _productService;
 
-        public ProductsController(IService<Product> service, IMapper mapper)
+        public ProductsController(IService<Product> service, IMapper mapper, IProductService productService)
         {
             _service = service;
             _mapper = mapper;
+            _productService = productService;
         }
 
+        // api/products/GetProductsWithCategory
+        //[HttpGet("GetProductsWithCategory")] +
+        [HttpGet("[action]")]
+        public async Task<IActionResult> GetProductsWithCategory()
+        {
+            return CreateActionResult(await _productService.GetProductsWithCategory());
+        }
+
+
+        // api/products
         [HttpGet]
         public async Task<IActionResult> All()
         {
@@ -32,7 +44,7 @@ namespace NLayerArchitecture.API.Controllers
         }
 
 
-        //www.mysite.com/api/products/5
+        // api/products/5
         [HttpGet("{id}")]
         public async Task<IActionResult> GetById(int id)
         {
