@@ -8,8 +8,8 @@ using NLayerArchitecture.Core.Model;
 
 namespace NLayerArchitecture.Core.Services
 {
-    public interface IProductService:IService<Product>
+    public interface ICategoryService:IService<Category>
     {
-        Task<CustomResponseDto<List<ProductWithCategoryDto>>> GetProductsWithCategory();
+        Task<CustomResponseDto<CategoryWithProductsDto>> GetSingleCategoryByIdWithProductsAsync(int categoryId);
     }
 }

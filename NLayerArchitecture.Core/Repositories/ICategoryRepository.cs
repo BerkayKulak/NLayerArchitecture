@@ -7,8 +7,8 @@ using NLayerArchitecture.Core.Model;
 
 namespace NLayerArchitecture.Core.Repositories
 {
-    public interface IProductRepository:IGenericRepository<Product>
+    public interface ICategoryRepository:IGenericRepository<Category>
     {
-        Task<List<Product>> GetProductsWithCategory();
+        Task<Category> GetSingleCategoryByIdWithProductsAsync(int categoryId);
     }
 }
