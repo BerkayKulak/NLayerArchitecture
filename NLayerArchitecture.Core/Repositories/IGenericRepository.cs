@@ -6,7 +6,7 @@ namespace NLayerArchitecture.Core.Repositories
     {
         Task<T> GetByIdAsync(int id);
 
-        IQueryable<T> GetAll(Expression<Func<T, bool>> expression);
+        IQueryable<T> GetAll();
 
         // productrepository.where(x=>x.id>5).orderBy().ToListAsync()
         IQueryable<T> Where(Expression<Func<T, bool>> expression);
