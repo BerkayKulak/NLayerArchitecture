@@ -3,6 +3,7 @@ using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using NLayerArchitecture.API.Filters;
+using NLayerArchitecture.API.Middlewares;
 using NLayerArchitecture.Core.Repositories;
 using NLayerArchitecture.Core.Services;
 using NLayerArchitecture.Core.UnitOfWorks;
@@ -53,6 +54,7 @@ if (app.Environment.IsDevelopment())
 }
 
 app.UseHttpsRedirection();
+app.UseCustomException();
 
 app.UseAuthorization();
 
