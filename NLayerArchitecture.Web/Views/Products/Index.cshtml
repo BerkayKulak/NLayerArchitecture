@@ -1,0 +1,31 @@
+﻿@model List<NLayerArchitecture.Core.DTOs.ProductWithCategoryDto>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<table class="table table-striped">
+    <thead>
+    <tr>
+        <td>ID</td>
+        <td>Name</td>
+        <td>Price</td>
+        <td>Stock</td>
+        <td>Category</td>
+        <td>CreatedDate</td>
+    </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <td>@item.Id</td>
+            <td>@item.Name</td>
+            <td>@item.Price</td>
+            <td>@item.Stock</td>
+            <td>@item.CategoryDto</td>
+            <td>@item.CreatedDate</td>
+      
+        }
+    </tbody>
+</table>
