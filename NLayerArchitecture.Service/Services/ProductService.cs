@@ -26,13 +26,25 @@ namespace NLayerArchitecture.Service.Services
             _mapper = mapper;
         }
 
-        public async Task<CustomResponseDto<List<ProductWithCategoryDto>>> GetProductsWithCategory()
+        // FOR API
+        //public async Task<CustomResponseDto<List<ProductWithCategoryDto>>> GetProductsWithCategory()
+        //{
+        //    var products = await _productRepository.GetProductsWithCategory();
+
+        //    var productsDto = _mapper.Map<List<ProductWithCategoryDto>>(products);
+
+        //    return CustomResponseDto<List<ProductWithCategoryDto>>.Success(200, productsDto);
+        //}
+
+
+        // FOR WEB
+        public async Task<List<ProductWithCategoryDto>> GetProductsWithCategory()
         {
             var products = await _productRepository.GetProductsWithCategory();
 
             var productsDto = _mapper.Map<List<ProductWithCategoryDto>>(products);
 
-            return CustomResponseDto<List<ProductWithCategoryDto>>.Success(200, productsDto);
+            return productsDto;
         }
     }
 }
