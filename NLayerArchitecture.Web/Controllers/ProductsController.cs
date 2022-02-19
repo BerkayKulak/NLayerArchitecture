@@ -29,7 +29,7 @@ namespace NLayerArchitecture.Web.Controllers
         {
             var categories = await _categoryService.GetAllAsync();
 
-            var categoriesDto = _mapper.Map<List<CategoryDto>>(categories);
+            var categoriesDto = _mapper.Map<List<CategoryDto>>(categories.ToList());
 
             ViewBag.categories = new SelectList(categoriesDto, "Id", "Name");
 
@@ -49,7 +49,7 @@ namespace NLayerArchitecture.Web.Controllers
 
             var categories = await _categoryService.GetAllAsync();
 
-            var categoriesDto = _mapper.Map<List<CategoryDto>>(categories);
+            var categoriesDto = _mapper.Map<List<CategoryDto>>(categories.ToList());
 
             ViewBag.categories = new SelectList(categoriesDto, "Id", "Name");
 
