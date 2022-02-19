@@ -1,4 +1,5 @@
 using System.Reflection;
+using FluentValidation.AspNetCore;
 using Microsoft.EntityFrameworkCore;
 using NLayerArchitecture.Core.Repositories;
 using NLayerArchitecture.Core.Services;
@@ -8,12 +9,13 @@ using NLayerArchitecture.Repository.Repositories;
 using NLayerArchitecture.Repository.UnitOfWorks;
 using NLayerArchitecture.Service.Mapping;
 using NLayerArchitecture.Service.Services;
+using NLayerArchitecture.Service.Validations;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 
-builder.Services.AddControllers();
+builder.Services.AddControllers().AddFluentValidation(x=>x.RegisterValidatorsFromAssemblyContaining<ProductDtoValidator>());
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
