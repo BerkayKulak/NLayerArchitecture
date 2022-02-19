@@ -19,13 +19,14 @@
     <tbody>
         @foreach (var item in Model)
         {
+            <tr>
             <td>@item.Id</td>
             <td>@item.Name</td>
             <td>@item.Price</td>
             <td>@item.Stock</td>
             <td>@item.CategoryDto</td>
             <td>@item.CreatedDate</td>
-      
+            </tr>
         }
     </tbody>
 </table>
