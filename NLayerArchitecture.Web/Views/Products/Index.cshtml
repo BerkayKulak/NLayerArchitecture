@@ -1,32 +1,40 @@
-﻿@model List<NLayerArchitecture.Core.DTOs.ProductWithCategoryDto>
-@{
+﻿@{
     ViewData["Title"] = "Index";
 }
-
-<h1>Index</h1>
-
+@model List<NLayerArchitecture.Core.DTOs.ProductWithCategoryDto>
+<a class="btn btn-primary" asp-controller="Products" asp-action="Save">Save Product</a>
 <table class="table table-striped">
     <thead>
     <tr>
-        <td>ID</td>
+        <td>Id</td>
         <td>Name</td>
         <td>Price</td>
         <td>Stock</td>
         <td>Category</td>
         <td>CreatedDate</td>
+        <td>Actions</td>
     </tr>
     </thead>
     <tbody>
-        @foreach (var item in Model)
-        {
-            <tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
             <td>@item.Id</td>
             <td>@item.Name</td>
             <td>@item.Price</td>
             <td>@item.Stock</td>
             <td>@item.CategoryDto</td>
             <td>@item.CreatedDate</td>
-            </tr>
-        }
+            <td>
+                <a class="btn btn-warning" asp-controller="Products" asp-action="Update" asp-route-id="@item.Id">Update</a>
+                <a class="btn btn-danger" asp-controller="Products" asp-action="Remove" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+    }
+
     </tbody>
+
+
+
 </table>
