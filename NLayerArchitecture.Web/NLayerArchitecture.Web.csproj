@@ -16,4 +16,8 @@
     <ProjectReference Include="..\NLayerArchitecture.Service\NLayerArchitecture.Service.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Models\" />
+  </ItemGroup>
+
 </Project>
