@@ -83,12 +83,18 @@ This section should list any major frameworks/libraries used to bootstrap your p
 
 - N-layer architecture
 - Manage admin features using Blazor Server
-- Build .NET 5 API from scratch
-- Consume .NET 5 API using Blazor WASM
-- Authentication & Authorization in Blazor Server and WASM
-- Integrate Stripe Payments in Blazor WASM
-- Repository Pattern and Dependency Injection
-- Deploying .NET API, Blazor WASM & Server to Azure
+- Generic Repository
+- AutoFac 
+- FluentValidation 
+- UnitOfWork 
+- Migration
+- Global Error Management
+- Action Methods
+- AutoMapper
+- Entity Framework Core 6.0
+- Dependency Injection
+- In Memory Caching
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
