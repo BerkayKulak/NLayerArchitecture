@@ -219,6 +219,27 @@ $ dotnet run --project ./projects/proj1/proj1.csproj
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
+## Backtesting Signal Accuracy
+During the testing period, the model signals to buy or sell based on its prediction for price
+movement the following day. By putting your trading algorithm aside and testing for signal accuracy
+alone, you can rapidly build and test more reliable models.
+
+```python
+{
+  "ConnectionStrings": {
+    "SqlConnection": "Data Source=(localdb)\\MSSQLLocalDB;Initial Catalog=UdemyNLayerDb;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"
+  },
+  "Logging": {
+    "LogLevel": {
+      "Default": "Information",
+      "Microsoft.AspNetCore": "Warning"
+    }
+  },
+  "AllowedHosts": "*"
+}
+
+```
+
 
 <!-- ROADMAP -->
 ## Bug / Feature Request
