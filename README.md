@@ -44,15 +44,25 @@
 Here's why:
 Each of these layers should be Single Responsibility to avoid tight coupling and to support Separation of Concern. (Note that tiers and layers are used interchangeably but there is slight difference. Layer is known to be logical separation, where tier is actually physical separation. This is where some layers could be hosted in different physical locations due to independence of layers.)
 
-## DATA ACCESS LAYER
+## DATA ACCESS / REPOSITORY LAYER
 This layer handles database interaction of the application, and only location where database related queries are done. Here queries might vary according to underlying database, but these inner queries are not exposed. Functions related to CRUD are exposed publicly from this layer, where application can execute these methods. Then data access layer would connect to database, execute required query and return results to other layers, and thereby keeping other layers abstract from database integration. Typically data access layer is added as repositories.
+
 <img width="100%" src="https://user-images.githubusercontent.com/61355143/154839109-2f1c9324-e2c2-4658-9b27-29757383bb8a.png">
 
-## BUSINESS LOGIC LAYER
+## CORE LAYER
+Development of Domain Logic with abstraction. Interfaces drives business requirements with light implementation. The Core project is the center of the Clean Architecture design, and all other project dependencies should point toward it.
+
+<img width="https://user-images.githubusercontent.com/61355143/154839222-d928e36b-8f81-4ee6-b5ea-a1049b9dd278.png">
+
+## BUSINESS / SERVICE LOGIC LAYER
 This layer should handle all domain specific logic of the application, thereby complete logic is in a central location to be managed easily. Data access layer’s atomic CRUD methods can be used to make meaningful business scenarios, and these business logic layer is typically added as services.
+
+<img width="100%" src="https://user-images.githubusercontent.com/61355143/154839144-1774ceeb-7040-4027-af08-42b15d5a5a02.png">
 
 ## PRESENTATION / UI LAYER
 This layer is entry point for external interaction with the application. As an example it could either be REST endpoints if its ASP.NET Web API or HTML pages if its ASP.NET MVC application. Here it is expected to be without any business logic, but rather directly forward the request to business logic layer. Some simple operations such as request validation can be done here. Typically presentation layer is added as controllers.
+
+<img width="100%" src="https://user-images.githubusercontent.com/61355143/154839186-d8045bda-1f05-41d3-b52a-bafd0027e9c6.png">
 
 ## You will be able to get answers to the following questions
 
