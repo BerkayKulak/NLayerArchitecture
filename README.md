@@ -217,9 +217,9 @@ $ dotnet run --project ./projects/proj1/proj1.csproj
 <!-- ROADMAP -->
 ## Bug / Feature Request
 
-If you find a bug (the website couldn't handle the query and / or gave undesired results), kindly open an issue [here](https://github.com/BerkayKulak/Blazor-Villagenix/issues/new) by including your search query and the expected result.
+If you find a bug (the website couldn't handle the query and / or gave undesired results), kindly open an issue [here](https://github.com/BerkayKulak/NLayerArchitecture/issues/new) by including your search query and the expected result.
 
-If you'd like to request a new function, feel free to do so by opening an issue [here](https://github.com/BerkayKulak/Blazor-Villagenix/issues/new). Please include sample queries and their corresponding results.
+If you'd like to request a new function, feel free to do so by opening an issue [here](https://github.com/BerkayKulak/NLayerArchitecture/issues/new). Please include sample queries and their corresponding results.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -257,7 +257,7 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 Berkay Kulak - (https://www.linkedin.com/in/berkay-kulak-3442311b1/) - kulakberkay15@gmail.com
 
-Project Link:   (https://github.com/BerkayKulak/Blazor-Villagenix)
+Project Link:   (https://github.com/BerkayKulak/NLayerArchitecture)
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
