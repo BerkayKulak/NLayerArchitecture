@@ -46,6 +46,7 @@ Each of these layers should be Single Responsibility to avoid tight coupling and
 
 ## DATA ACCESS LAYER
 This layer handles database interaction of the application, and only location where database related queries are done. Here queries might vary according to underlying database, but these inner queries are not exposed. Functions related to CRUD are exposed publicly from this layer, where application can execute these methods. Then data access layer would connect to database, execute required query and return results to other layers, and thereby keeping other layers abstract from database integration. Typically data access layer is added as repositories.
+<img width="100%" src="https://user-images.githubusercontent.com/61355143/154839109-2f1c9324-e2c2-4658-9b27-29757383bb8a.png">
 
 ## BUSINESS LOGIC LAYER
 This layer should handle all domain specific logic of the application, thereby complete logic is in a central location to be managed easily. Data access layer’s atomic CRUD methods can be used to make meaningful business scenarios, and these business logic layer is typically added as services.
