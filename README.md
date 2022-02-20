@@ -30,9 +30,10 @@
 
 
 <!-- ABOUT THE PROJECT -->
-## About The Project
-
+## Architecture
 <img width="100%" src="https://user-images.githubusercontent.com/61355143/154838306-2d636074-bce8-4ec0-af82-b5be84ab9456.jpg">
+
+## Process
 <img width="100%" src="https://user-images.githubusercontent.com/61355143/154838413-7dda1514-0f16-4122-83da-dd18fedb41ff.gif">
 
 ## Layers
