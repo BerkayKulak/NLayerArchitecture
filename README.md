@@ -135,12 +135,12 @@ This is an example of how to list things you need to use the software and how to
   
 * dotnet NLayerArchitecture.Repository.csproj
   ```sh
- <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.2" />
- <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.2" />
- <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.2">
- <PrivateAssets>all</PrivateAssets>
- <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
- </PackageReference>
+  <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.2" />
+  <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="6.0.2" />
+  <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="6.0.2">
+  <PrivateAssets>all</PrivateAssets>
+  <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+  </PackageReference>
   ```
   
 * dotnet NLayerArchitecture.Core.csproj
