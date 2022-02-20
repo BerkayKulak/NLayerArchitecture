@@ -216,11 +216,7 @@ $ dotnet run --project ./projects/proj1/proj1.csproj
 
 
 ## appsettings.json
-During the testing period, the model signals to buy or sell based on its prediction for price
-movement the following day. By putting your trading algorithm aside and testing for signal accuracy
-alone, you can rapidly build and test more reliable models.
-
-```python
+```
 {
   "ConnectionStrings": {
     "SqlConnection": "Data Source=[<LOCAL DB>];Initial Catalog=[<YOUR DB NAME>][;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False"
@@ -233,6 +229,43 @@ alone, you can rapidly build and test more reliable models.
   },
   "AllowedHosts": "*"
 }
+
+```
+
+## launchSettings.json
+```
+{
+  "$schema": "https://json.schemastore.org/launchsettings.json",
+  "iisSettings": {
+    "windowsAuthentication": false,
+    "anonymousAuthentication": true,
+    "iisExpress": {
+      "applicationUrl": "http://localhost:15112",
+      "sslPort": 44321
+    }
+  },
+  "profiles": {
+    "NLayerArchitecture.API": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "applicationUrl": "https://localhost:7065;http://localhost:5065",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    },
+    "IIS Express": {
+      "commandName": "IISExpress",
+      "launchBrowser": true,
+      "launchUrl": "swagger",
+      "environmentVariables": {
+        "ASPNETCORE_ENVIRONMENT": "Development"
+      }
+    }
+  }
+}
+
 
 ```
 
