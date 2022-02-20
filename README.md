@@ -52,7 +52,7 @@ This layer should handle all domain specific logic of the application, thereby c
 ## PRESENTATION / UI LAYER
 This layer is entry point for external interaction with the application. As an example it could either be REST endpoints if its ASP.NET Web API or HTML pages if its ASP.NET MVC application. Here it is expected to be without any business logic, but rather directly forward the request to business logic layer. Some simple operations such as request validation can be done here. Typically presentation layer is added as controllers.
 
-For years JavaScript frameworks have dominated the front end/client side development! But things are about to change with Blazor!
+## You will be able to get answers to the following questions
 
 - How to build an application with N-layer architecture ?
 - How is the Core layer built?
@@ -69,11 +69,6 @@ For years JavaScript frameworks have dominated the front end/client side develop
 - How to use Entity Framework with Multilayer Architecture?
 - How is global error management handled?
 - How do we return a single response model in our API applications? what are the benefits ?
-
-
-
-help developers transition from building basic sample apps to implementing more real world concepts, design patterns, and features.
-
 
 
 ### Built With
