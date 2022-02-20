@@ -41,17 +41,36 @@
 
 
 Here's why:
-Blazor is an exciting new part of .NET Core (.NET 5) designed for building rich web user interfaces in C#. This course will help developers transition from building basic sample apps to implementing more real world concepts, design patterns, and features.
+Each of these layers should be Single Responsibility to avoid tight coupling and to support Separation of Concern. (Note that tiers and layers are used interchangeably but there is slight difference. Layer is known to be logical separation, where tier is actually physical separation. This is where some layers could be hosted in different physical locations due to independence of layers.)
 
-* You should implement DRY principles to the rest of your life :smile:
+* DATA ACCESS LAYER
+This layer handles database interaction of the application, and only location where database related queries are done. Here queries might vary according to underlying database, but these inner queries are not exposed. Functions related to CRUD are exposed publicly from this layer, where application can execute these methods. Then data access layer would connect to database, execute required query and return results to other layers, and thereby keeping other layers abstract from database integration. Typically data access layer is added as repositories.
+
+* BUSINESS LOGIC LAYER
+This layer should handle all domain specific logic of the application, thereby complete logic is in a central location to be managed easily. Data access layer’s atomic CRUD methods can be used to make meaningful business scenarios, and these business logic layer is typically added as services.
+
+* PRESENTATION / UI LAYER
+This layer is entry point for external interaction with the application. As an example it could either be REST endpoints if its ASP.NET Web API or HTML pages if its ASP.NET MVC application. Here it is expected to be without any business logic, but rather directly forward the request to business logic layer. Some simple operations such as request validation can be done here. Typically presentation layer is added as controllers.
 
 For years JavaScript frameworks have dominated the front end/client side development! But things are about to change with Blazor!
 
-- How do you scale an existing application? 
-- How do you architect a mid-large scale project?
-- How to correctly process payments?
-- Add changes to reflect the changes made
-- How to efficiently understand Blazor and use it in real world projects?
+- How to build an application with N-layer architecture ?
+- How is the Core layer built?
+- How is the Data layer built?
+- How is the Service layer built?
+- How is Generic Repository implemented in multi-layer architecture?
+- What is AutoFac? how is it used ? How is it implemented in the project?
+- What is FluentValidation? how is it used ? How is it implemented in the project?
+- How is UnitOfWork implemented in a multi-layer architecture?
+- How are migration operations performed?
+- How is error management handled globally?
+- How to avoid code repeats in Action Methods?
+- How is the AutoMapper library used in multi-layer architecture?
+- How to use Entity Framework with Multilayer Architecture?
+- How is global error management handled?
+- How do we return a single response model in our API applications? what are the benefits ?
+
+
 
 help developers transition from building basic sample apps to implementing more real world concepts, design patterns, and features.
 
@@ -61,14 +80,13 @@ help developers transition from building basic sample apps to implementing more 
 
 This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
-* [Blazor](https://dotnet.microsoft.com/en-us/apps/aspnet/web-apps/blazor)
 * [Asp.Net Core API](https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-6.0&tabs=visual-studio)
 * [MSSql](https://www.microsoft.com/en-us/sql-server/sql-server-2019)
 * [MVC](https://docs.microsoft.com/en-us/aspnet/core/mvc/overview?view=aspnetcore-6.0)
 
 ### Technologies and Methods
 
-- Real world application using Blazor Web Assembly
+- N-layer architecture
 - Manage admin features using Blazor Server
 - Build .NET 5 API from scratch
 - Consume .NET 5 API using Blazor WASM
