@@ -51,7 +51,8 @@ This layer handles database interaction of the application, and only location wh
 
 ## CORE LAYER
 Development of Domain Logic with abstraction. Interfaces drives business requirements with light implementation. The Core project is the center of the Clean Architecture design, and all other project dependencies should point toward it.
-<img width="https://user-images.githubusercontent.com/61355143/154839222-d928e36b-8f81-4ee6-b5ea-a1049b9dd278.png">
+
+<img width="https://user-images.githubusercontent.com/61355143/154839267-54a6982c-cc5b-4c0a-88f5-49f1c722f70c.png">
 
 
 ## BUSINESS / SERVICE LOGIC LAYER
