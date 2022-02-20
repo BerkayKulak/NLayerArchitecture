@@ -91,7 +91,7 @@ This layer is entry point for external interaction with the application. As an e
 This section should list any major frameworks/libraries used to bootstrap your project. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 
 * [Asp.Net Core API](https://docs.microsoft.com/en-us/aspnet/core/tutorials/first-web-api?view=aspnetcore-6.0&tabs=visual-studio)
-* [MSSql](https://www.microsoft.com/en-us/sql-server/sql-server-2019)
+* [SQL Server 2019](https://www.microsoft.com/en-us/sql-server/sql-server-2019)
 * [MVC](https://docs.microsoft.com/en-us/aspnet/core/mvc/overview?view=aspnetcore-6.0)
 
 ### Technologies and Methods
