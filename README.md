@@ -36,10 +36,6 @@
 ## Process
 <img width="100%" src="https://user-images.githubusercontent.com/61355143/154838413-7dda1514-0f16-4122-83da-dd18fedb41ff.gif">
 
-## Layers
-<img width="100%" src="https://user-images.githubusercontent.com/61355143/154838686-ad7c35a6-2840-440a-b7c2-2e581f715052.gif">
-
-
 
 Here's why:
 Each of these layers should be Single Responsibility to avoid tight coupling and to support Separation of Concern. (Note that tiers and layers are used interchangeably but there is slight difference. Layer is known to be logical separation, where tier is actually physical separation. This is where some layers could be hosted in different physical locations due to independence of layers.)
