@@ -60,10 +60,16 @@ This layer should handle all domain specific logic of the application, thereby c
 
 <img height= "400px" width="100%" src="https://user-images.githubusercontent.com/61355143/154839144-1774ceeb-7040-4027-af08-42b15d5a5a02.png">
 
+## API LAYER
+An API layer(software library) is nothing more than an aggregated proxy of all of your service offerings. Graphic user interfaces provides user interaction, and behind it API handles actions in abstraction mode. For example, your Email client. Soon after writing draft, the moment when you are about to send; APIs will have an information about this SEND request from you and will do abstract operations such as validation sender mail id, attachment etc,.
+In other layman words, API layer is a bridge between your client and application. Bridge which carries data from/to application/client. With this mechanism, will have consistent security along with data transfer.
+
+<img height= "500px" width="100%" src="https://user-images.githubusercontent.com/61355143/154839741-17a152e5-7323-41a2-8c93-b83f72cb8093.png">
+
 ## PRESENTATION / UI LAYER
 This layer is entry point for external interaction with the application. As an example it could either be REST endpoints if its ASP.NET Web API or HTML pages if its ASP.NET MVC application. Here it is expected to be without any business logic, but rather directly forward the request to business logic layer. Some simple operations such as request validation can be done here. Typically presentation layer is added as controllers.
 
-<img height= "400px" width="100%" src="https://user-images.githubusercontent.com/61355143/154839186-d8045bda-1f05-41d3-b52a-bafd0027e9c6.png">
+<img height= "500px" width="100%" src="https://user-images.githubusercontent.com/61355143/154839186-d8045bda-1f05-41d3-b52a-bafd0027e9c6.png">
 
 ## You will be able to get answers to the following questions
 
